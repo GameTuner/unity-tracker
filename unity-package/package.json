@@ -1,0 +1,17 @@
+{
+    "name": "com.algebraai.gametunertracker",
+    "version": "0.7.9",
+    "displayName": "GameTuner Unity Tracker SDK",
+    "description": "Add analytics to your Unity games and apps with the GameTuner event tracker for Unity.",
+    "unity": "2020.1",  
+    "documentationUrl": "https://github.com/GameTuner/unity-tracker",
+    "dependencies": {
+     
+    },
+    "author": {
+      "name": "AlgebraAI",
+      "email": "djordjes@algebraai.tech",
+      "url": "http://gametuner.ai/"
+    }
+  }
+  

@@ -1,0 +1,197 @@
+Version 0.07.09 (2024-01-23)
+--------------------------
+Add url parameter to tracker init method
+
+Version 0.07.08 (2023-09-21)
+--------------------------
+Extend common events trigger methods with optional parameter for event
+
+Version 0.07.07 (2023-09-21)
+--------------------------
+Fix double event index in event context
+Add delete user data method
+Add opt-out method
+
+Version 0.07.06 (2023-05-12)
+--------------------------
+Fix trigger events when app back from background
+Log when event is discarded
+
+Version 0.07.05 (2023-05-11)
+--------------------------
+Fix wrapped purchase initiated event (data type)
+
+Version 0.07.04 (2023-05-11)
+--------------------------
+Update purchase initiated event schema
+
+Version 0.07.03 (2023-05-11)
+--------------------------
+Fix trigger new session when app goes to background
+Fix concurrent access to session context
+Change SnowplowTracker to GameTunerTracker namespace
+
+Version 0.07.01 (2023-04-11)
+--------------------------
+Small fix for map object type
+Change list of standard events
+
+Version 0.07.00 (2023-04-03)
+--------------------------
+Fix session time (change mechanic of app focus)
+
+Version 0.06.05 (2023-02-17)
+--------------------------
+Change order of events when pulling from store (createdAt chaged to eventIndex)
+Sandbox mode is sent as "0" or "1", instead true or false
+
+Version 0.06.04 (2023-02-14)
+--------------------------
+Fixed common events
+
+Version 0.06.03 (2023-02-14)
+--------------------------
+Sandbox mode moved from event context to Subject object
+
+Version 0.06.02 (2023-01-24)
+--------------------------
+Add standard schemas
+Change new_user to first_open
+Add launch mode
+Add store parameter to device context
+Change ClientTracker -> GametunerUnityTracker
+
+Version 0.06.01 (2022-12-27)
+--------------------------
+Cahnge version format
+Change project name to GameTunerTracker
+Separate event context to session and event contexts
+Send device and session context with every event
+Fix session_time
+Remove session checker
+User_id is optional field for sending events
+
+Version 0.5.15 (2022-09-21)
+--------------------------
+Fix - Skiped session id after triggering new session
+Remove background thread logic, logout is triggered after going to foreground
+Add installation id and api key fields to http request
+Wrap init in try/catch block
+Add session time to event context
+
+Version 0.5.14 (2022-06-10)
+--------------------------
+Fix - Stop/Start tracker on focus change
+
+Version 0.5.13 (2022-06-02)
+--------------------------
+Fix for IOS - Stop/Start tracker on focus change
+
+Version 0.5.12 (2022-05-31)
+--------------------------
+Add android and ios device platforms
+Remove 'ContainsKey' method on JObject object
+
+Version 0.5.11 (2022-05-27)
+--------------------------
+Add device_platform property to login and registration events
+
+Version 0.5.10 (2022-04-05)
+--------------------------
+Change priority for login, logout and registration events
+Fix for double login events with same sessionID
+
+Version 0.5.9 (2022-03-04)
+--------------------------
+Revert change for device platform
+
+Version 0.5.8 (2022-03-04)
+--------------------------
+Timeout for request increased from 10 to 30
+Add GetUserID public method
+Change in device platform
+Add onSessionStart public delegate
+
+Version 0.5.7 (2022-01-26)
+--------------------------
+Event parameters with null value is excluded from POST request.
+
+Version 0.5.6 (2022-01-14)
+--------------------------
+Fix when event parameter is type of Dictionary<string, object>
+
+Version 0.5.5 (2022-01-12)
+--------------------------
+Changed transaction_id to event_bundle_id
+
+Version 0.5.4 (2021-12-14)
+--------------------------
+Add GetRegistration time to ClientTracker
+
+Version 0.5.3 (2021-12-14)
+--------------------------
+Add support to handle events without userid
+ClientTracke.Init now has userId and useHttps as optional paramters
+Add SetUserId to ClientTracker
+Add field list of context name to LogEvent as optional
+Add is_online field to event_context
+Demo project updated to support ClientTracker
+
+Version 0.5.2 (2021-11-23)
+--------------------------
+Add custom context (event and device)
+Fix Log, removed define symbols (They don't work in native plugin)
+Fixed Session StorageMechanism (LITEDB -> SQLITE)
+Add last triggerd event time to Tracker object
+Add transactionID to event context
+SelfDescribeJson now can accept empty/null data
+Add event counter
+Fix AndroidNative and IOSNative
+Fix define symbols in whole project
+Add EventNames available for usage on client side
+
+Version 0.5.1 (2021-11-11)
+--------------------------
+Added ClientTracker.cs class as main bridge between unity and plugin
+Extended EventStore.
+Modified Session.cs and logic for calculating session when app goes to background.
+Added build.sh script for building project and copy dll.
+Added Wrapper namespace
+Hidden plugin logic behind ClientTracker
+
+Version 0.5.0 (2021-08-23)
+--------------------------
+Replace UnityJSON with Newtonsoft.Json (#41)
+Add Test and Build GitHub Action (#33)
+Add Unity Activation Action (#44)
+Update SnowplowTracker.Tests to Unity 2020.3.16f1 (#43)
+Update SnowplowTracker.Demo to Unity 2020.3.16f1 (#42)
+Include at least one example of Unstructured Event in demo (#35)
+Demo game has missing Scenes in Build settings (#34)
+
+Version 0.4.0 (2019-12-10)
+--------------------------
+Migrate SnowplowTracker to .NET Standard 2.0 (#22)
+Switch to new Database library for better cross platform support (#23)
+Expose EventStore Interface for easy extension (#32)
+Port Snowplow Demo Game to Android/iOS (#3)
+Migrate test suite to .NET Standard 2.0 (#29)
+Include link.xml and required DLLs in Resources folder for all platforms (#30)
+Fix Mobile Paths to support Android (#18)
+Fix Peru version so vagrant up succeeds (#20)
+Update Copyright notices to 2019 (#31)
+Automate build using Travis (#24)
+
+Version 0.3.0 (2019-04-08)
+--------------------------
+Fix paths used in mobile file storage and databases (#15)
+Fix test method call parameter ambiguities (#16)
+
+Version 0.2.0 (2019-2-28)
+--------------------------
+Update the tracker to handle mobile devices (#10)
+Fix race condition in the emit loop (#8)
+
+Version 0.1.0 (2015-10-08)
+--------------------------
+Initial release
